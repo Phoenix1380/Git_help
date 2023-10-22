@@ -302,7 +302,22 @@ another line
 
 HEAD
 
+Файл HEAD (англ. «голова», «головной») — один из служебных файлов папки .git.
+Он указывает на коммит, который сделан последним (то есть на самый новый).
 
+$ pwd # посмотрели, где мы
+/c/Users/Max_PC/my-git-projects/Git_help
+/c/Users/Max_PC/my-git-projects/first-project
+
+$ cd .git/
+$ ls # посмотрели, какие есть файлы
+COMMIT_EDITMSG  ORIG_HEAD  description  index  logs/     refs/
+HEAD            config     hooks/       info/  objects/
+
+$ cat HEAD # команда cat показывает содержимое файла
+ref: refs/heads/master
+Внутри HEAD — ссылка на служебный файл: refs/heads/master (или refs/heads/main в зависимости от названия ветки).
+Если заглянуть в этот файл, можно увидеть хеш последнего коммита.
 
 
 
